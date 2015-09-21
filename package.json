@@ -1,0 +1,27 @@
+{
+  "name": "angucomplete-ie8",
+  "version": "0.0.1",
+  "description": "Autocomplete directive for people who still need to suffer",
+  "author": "ghiden",
+  "email": "hidenari@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ghiden/angucomplete-ie8.git"
+  },
+  "engines": {
+    "node": ">= 0.8.4"
+  },
+  "main": "./angucomplete-ie8.js",
+  "dependencies": {},
+  "devDependencies": {
+    "async": "0.1.x",
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.5.1",
+    "grunt-contrib-jshint": "~0.6.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-karma": "~0.6.2",
+    "karma": "~0.10.2",
+    "grunt-conventional-changelog": "~1.0.0",
+    "load-grunt-tasks": "~0.2.0"
+  }
+}
