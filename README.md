@@ -5,7 +5,14 @@ This is a fork of angucomplete-alt and the objective is to support IE8.
 
 To see a demo go here: http://ghiden.github.io/angucomplete-ie8
 
-###Key Features
+### IE8
+
+To use angucomplete-ie8 on IE8, take these steps:
+
+1. Use angular 1.2 version.
+2. Include polyfills es5-shim and JSON3
+
+### Key Features
 * Show just a title, a title and a description or a title, description and image in your autocomplete list
 * Deliberately minimally styled so you can customise it to your heart's content!
 * Reads JSON data and allows you to specify which fields to use for display
@@ -186,27 +193,6 @@ To run examples, cd into 'examples' directory and run static http server of your
 ```bash
 cd examples
 python -m SimpleHTTPServer
-```
-
-### IE8
-
-To use angucomplete-ie8 on IE8, take these steps:
-
-1. Use angular 1.2 version.
-2. Include polyfills es5-shim and JSON3
-3. Comment out the promise chain and use bracket notation
-
-```js
-scope.remoteApiHandler(str, httpCanceller.promise)
-  .then(httpSuccessCallbackGen(str))
-  .catch(httpErrorCallback);
-```
-
-```js
-/* IE8 compatible */
-scope.remoteApiHandler(str, httpCanceller.promise)
-  ['then'](httpSuccessCallbackGen(str))
-  ['catch'](httpErrorCallback);
 ```
 
 ### Contributors
