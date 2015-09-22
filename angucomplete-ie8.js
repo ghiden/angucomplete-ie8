@@ -282,6 +282,12 @@
           if (event) {
             event.preventDefault();
           }
+
+          // cancel search timer
+          $timeout.cancel(searchTimer);
+          // cancel http request
+          cancelHttpRequest();
+
           setInputString(scope.searchStr);
         }
       }
