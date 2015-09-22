@@ -86,7 +86,12 @@
         if (event.target.id) {
           mousedownOn = event.target.id;
           if (mousedownOn === scope.id + '_dropdown') {
-            document.body.addEventListener('click', clickoutHandlerForDropdown);
+
+            if (document.body.addEventListener) {
+              document.body.addEventListener('click', clickoutHandlerForDropdown);
+            } else {
+              document.body.attachEvent('click', clickoutHandlerForDropdown);
+            }
           }
         }
         else {
