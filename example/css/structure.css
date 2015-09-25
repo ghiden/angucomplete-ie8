@@ -1050,3 +1050,7 @@ ul {
   overflow-y: auto;
   max-height: 150px;
 }
+
+.disabled {
+  color: #ccc;
+}

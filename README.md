@@ -10,7 +10,9 @@ To see a demo go here: http://ghiden.github.io/angucomplete-ie8
 To use angucomplete-ie8 on IE8, take these steps:
 
 1. Use angular 1.2 version.
-2. Include polyfills es5-shim and JSON3
+2. Include es5-shim and es5-sham
+3. Include JSON3
+4. No chaining on promises
 
 ### Key Features
 * Show just a title, a title and a description or a title, description and image in your autocomplete list
