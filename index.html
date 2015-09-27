@@ -13,8 +13,9 @@
     </head>
   <body ng-controller="MainController">
     <!--[if lt IE 9]>
-      <script src="js/libs/es5-shim.min.js"></script>
-      <script src="js/libs/json3.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.13/es5-shim.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.13/es5-sham.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/json3/3.3.2/json3.min.js"></script>
     <![endif]-->
 
     <a href="https://github.com/ghiden/angucomplete-ie8"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
@@ -110,6 +111,7 @@
       <div class="large-padded-row">
 
         <h3><a name="example5" class="page-anchor">Example 5 - Using GitHub Search API</a></h3>
+        <h4 class="disabled">does not work on IE8 due to IE8's security model</h4>
         <div class="padded-row">
           <div angucomplete-ie8 id="ex5" placeholder="Search projects" pause="500" selected-object="selectedProject" remote-url="https://api.github.com/search/repositories" remote-url-request-formatter="remoteUrlRequestFn" remote-url-data-field="items" title-field="name" description-field="description" minlength="2" input-class="form-control form-control-small" match-class="highlight">
           </div>

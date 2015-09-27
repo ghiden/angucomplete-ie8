@@ -86,7 +86,12 @@
         if (event.target.id) {
           mousedownOn = event.target.id;
           if (mousedownOn === scope.id + '_dropdown') {
-            document.body.addEventListener('click', clickoutHandlerForDropdown);
+
+            if (document.body.addEventListener) {
+              document.body.addEventListener('click', clickoutHandlerForDropdown);
+            } else {
+              document.body.attachEvent('click', clickoutHandlerForDropdown);
+            }
           }
         }
         else {
@@ -277,6 +282,12 @@
           if (event) {
             event.preventDefault();
           }
+
+          // cancel search timer
+          $timeout.cancel(searchTimer);
+          // cancel http request
+          cancelHttpRequest();
+
           setInputString(scope.searchStr);
         }
       }
@@ -452,14 +463,8 @@
         httpCanceller = $q.defer();
 
         scope.remoteApiHandler(str, httpCanceller.promise)
-          .then(httpSuccessCallbackGen(str))
-          .catch(httpErrorCallback);
-
-        /* IE8 compatible
-        scope.remoteApiHandler(str, httpCanceller.promise)
           ['then'](httpSuccessCallbackGen(str))
           ['catch'](httpErrorCallback);
-        */
       }
 
       function clearResults() {
