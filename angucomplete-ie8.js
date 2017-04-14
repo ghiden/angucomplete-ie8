@@ -187,9 +187,17 @@
       }
 
       function extractTitle(data) {
-        // split title fields and run extractValue for each and join with ' '
-        return scope.titleField.split(',')
-          .map(function(field) {
+        return extractProperty(scope.titleField, data);
+      }
+
+      function extractDesctiption(data) {
+        return extractProperty(scope.descriptionField, data);
+      }
+      
+      function extractProperty(property, data) {
+        // split description fields and run extractValue for each and join with ' '
+        return property.split(',')
+          .map(function (field) {
             return extractValue(data, field);
           })
           .join(' ');
@@ -558,7 +566,7 @@
 
             description = '';
             if (scope.descriptionField) {
-              description = formattedDesc = extractValue(responseData[i], scope.descriptionField);
+              description = formattedDesc = extractDesctiption(responseData[i]);
             }
 
             image = '';
